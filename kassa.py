@@ -35,8 +35,8 @@ class OnlineSalesRegisterCollector:
     def delete_item_from_check(self, name):
         try:
             index = self.__name_items.index(name)
-            self.name_items.pop(index)
-            self.number_items -= 1
+            self.__name_items.pop(index)
+            self.__number_items -= 1
         except ValueError:
             raise NameError('Позиция отсутствует в чеке')
     
